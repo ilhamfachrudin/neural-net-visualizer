@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neural Net Visualizer — Xeran</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="controls">
+      <h2>Network Config</h2>
+      <label>Hidden Layers: <span id="layers-val">2</span>
+        <input type="range" id="layers" min="1" max="5" value="2" />
+      </label>
+      <label>Neurons/Layer: <span id="neurons-val">4</span>
+        <input type="range" id="neurons" min="2" max="8" value="4" />
+      </label>
+      <label>Learning Rate: <span id="lr-val">0.01</span>
+        <input type="range" id="lr" min="0.001" max="0.1" step="0.001" value="0.01" />
+      </label>
+      <button id="train-btn">▶ Train</button>
+      <button id="reset-btn">↺ Reset</button>
+      <div class="loss-box">
+        <span>Loss: </span><span id="loss-val">—</span>
+      </div>
+    </aside>
+    <main>
+      <canvas id="canvas"></canvas>
+    </main>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
